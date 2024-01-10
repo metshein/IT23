@@ -17,7 +17,7 @@ for rida in fail:
         print(f"Tahvli ette tuleb: {rida}.")
     nr+=1
 
-
+#szdgdfgsdfh
 
 #Jukebox
 # failinimi = input("Palun sisestage failinimi: ")
