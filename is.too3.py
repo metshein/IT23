@@ -4,13 +4,21 @@
 
 import random
 
-#sissetulekud
-fail = open("konto.txt", encoding="utf-8")
-for rida in fail:
-    if float(rida) > 0:
-        print(float(rida))
+failinimi = input("Palun sisestage failinimi: ")
+fail = open("edm.txt", encoding="utf-8")
 
-fail.close()
+
+
+
+
+
+#sissetulekud
+# fail = open("konto.txt", encoding="utf-8")
+# for rida in fail:
+#     if float(rida) > 0:
+#         print(float(rida))
+
+# fail.close()
 
 
 #rebased
