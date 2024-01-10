@@ -2,84 +2,56 @@
 #M.Metshein 
 #10.01.24
 
-import random
-import datetime
 
-#4.5. Mündid
+def pronksikarva_summa(f):
+    kassa = 0
+    fail = open(f)
+    for mynt in fail:
+        if int(mynt)<10:
+            #print(mynt, end="")
+            kassa += int(mynt)
+    print("\nKassas: ", kassa)
+
+
+pronksikarva_summa("myndid.txt")
 
 
 
-pronksikarva_summa()
-
-
-
-
-#------------------------------------------------------------
-
-# 4.4. Tervitused
-def tervitus(jrk):
+#---------------------------------
+kylalised = 8
+def tervitus(n):
     print('Võõrustaja: "Tere!"')
-    print(f"Täna {jrk}. kord tervitada, mõtiskleb võõrustaja.")
-    print('Külaline: "Tere, suur tänu kutse eest!"')
+    print(f"Täna {n}. kord tervitada!")
+    print('Külaline: "Tere, suur tänu kutsumast!"')
 
-kylaliste_arv = int(input("Mitu inimest on kutsutud: "))
-for i in range(kylaliste_arv):
+for i in range(kylalised):
     tervitus(i+1)
 
-#------------------------------------------------------------
+#---------------------------------
+def eelarve(kylalised):
+    summa = kylalised * 10 + 55
+    return summa
 
-#4.3. Peo eelarve
-def eelarve(arv):
-    kogusumma = arv * 10 + 55
-    return kogusumma
+palju = int(input("Mitu kutsutud: "))
+palju2 = int(input("Mitu tuleb: "))
+print(f"Maksimaalne eelarve: {eelarve(palju)}€")
+print(f"Minimaalne eelarve: {eelarve(palju2)}€")
 
-kylaliste_arv = int(input("Mitu inimest on kutsutud: "))
-kylaliste_arv_tegelik = int(input("Mitu inimest tuleb: "))
-print(f"MAX eelarve: {eelarve(kylaliste_arv)}")
-print(f"MIN eelarve: {eelarve(kylaliste_arv_tegelik)}")
-#------------------------------------------------------------
 
-#4.2. Õunamahl
+#---------------------------
 def mahlapakkide_arv(kg):
-    mahlapakkidearv = round(kg * 0.4 / 3)
-    return mahlapakkidearv
+    pakid = round(kg * 0.4 / 3)
+    return pakid
 
-ountekogus = float(input("Sisesta õunte kogus: "))
-print(mahlapakkide_arv(ountekogus))
-#------------------------------------------------------------
+kogus = float(input("Õunte kogus: "))
+print(mahlapakkide_arv(kogus))
 
-#4.1. Bänner
-def banner(l):
-    print(l.upper())
+#---------------------------
+def banner(t):
+    print(t.upper())
 
-kord = int(input("Mitu korda: "))
-tekst = input("Lisa tekst: ")
+ask = int(input("Mitu korda: "))
+ask2 = input("Reklaamlause: ")
 
-for i in range(kord):
-    banner(tekst)
-#------------------------------------------------------------
-
-
-
-
-
-
-# #4.6. Kuupäev
-# kuunimi()
-# kuupäev_sõnena()
-
-
-
-
-
-
-
-
-
-#sissetulekud
-# fail = open("konto.txt", encoding="utf-8")
-# for rida in fail:
-#     if float(rida) > 0:
-#         print(float(rida))
-
-# fail.close()
+for i in range(ask):
+    banner(ask2)
