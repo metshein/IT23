@@ -1,12 +1,41 @@
 #TÜ iseseisev töö
 #M.Metshein 
-#18.12.23
+#18.12.23, 10.01.24
 
 import random
+import datetime
+# from datetime import *
 
-failinimi = input("Palun sisestage failinimi: ")
-fail = open(f"c:\\Users\\mario.metshein\\Desktop\\python_harj\\IT23\\{failinimi}", encoding="utf-8")
-fail = open(failinimi, encoding="utf-8")
+
+#Tahvli juurde
+fail = open("nimekiri.txt", encoding="utf-8")
+
+p  = datetime.datetime.now().day
+nr = 1
+for rida in fail:
+    if nr==p:
+        print(f"Tahvli ette tuleb: {rida}.")
+    nr+=1
+
+
+
+#Jukebox
+# failinimi = input("Palun sisestage failinimi: ")
+# fail = open(failinimi, encoding="utf-8")
+# nr = 1
+# for rida in fail:
+#     print(f"{nr}. {rida}",end="")
+#     nr+=1
+
+# fail.seek(0)
+# nr = 1
+# jrk = int(input("\nValige laulu järjekorranumber: "))
+# for rida in fail:
+#     if nr==jrk:
+#         print(f"Mängitav muusikapala on: {rida}.")
+#     nr+=1
+
+
 
 
 
