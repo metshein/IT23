@@ -5,7 +5,9 @@
 import random
 
 failinimi = input("Palun sisestage failinimi: ")
-fail = open("edm.txt", encoding="utf-8")
+fail = open(f"c:\\Users\\mario.metshein\\Desktop\\python_harj\\IT23\\{failinimi}", encoding="utf-8")
+fail = open(failinimi, encoding="utf-8")
+
 
 
 
