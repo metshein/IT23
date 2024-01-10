@@ -2,7 +2,10 @@
 #M.Metshein 
 #18.12.23, 10.01.24
 
-import random
+#jukebox
+siiamidagi = input("Anna failinimi: ")
+fail = open(siiamidagi, encoding="utf-8")
+print("Muusikapalade valik:")
 
 
 
