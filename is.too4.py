@@ -15,7 +15,7 @@ def pronksikarva_summa(f):
 
 pronksikarva_summa("myndid.txt")
 
-
+dddd
 
 #---------------------------------
 kylalised = 8
